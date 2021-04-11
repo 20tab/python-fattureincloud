@@ -19,18 +19,18 @@ jobs:
     - name: Install dependencies
       run: |
         make dev
-    - name: Lint with flake8
+    - name: Check with flake8, black, isort, mypy
       run: |
         make fix
     - name: Test with coverage
       run: |
         make coverage
-    - name: coverage.py badge
+    - name: Code Coverage Report
       # You may pin to the exact commit or the version.
-      # uses: tj-actions/coverage-badge-py@545ccccfd2b4b9944fb6383183dd7d45f96c72f3
-      uses: tj-actions/coverage-badge-py@v1.4
+      # uses: romeovs/lcov-reporter-action@90fd2b751de87c16edf5ae1d5878b73755c497b0
+      uses: romeovs/lcov-reporter-action@v0.2.11
       with:
-        # Output path to write the badge.
-        output: # default is coverage.svg
-        # Overwrite existing.
-        overwrite: # default is true
+        # Github token
+        github-token: 
+        # The location of the lcov.info file
+        lcov-file: # optional
