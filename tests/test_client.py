@@ -1,9 +1,11 @@
 from unittest import TestCase
+from unittest.mock import patch
 
 from requests_mock import Mocker
 
 from fattureincloud.client import FattureInCloudAPI
-from tests.mocking import mocker_register_uri
+from fattureincloud.exceptions import FattureInCloudExcpetion
+from tests.mocking import MockedErrorResponse, mocker_register_uri
 
 
 class TestClient(TestCase):
@@ -33,3 +35,18 @@ class TestClient(TestCase):
         }
         res = self.client.info()
         self.assertEqual(res, EXPECTED)
+
+    @Mocker()
+    def test_post_error(self, mocker):
+        """Test requester post method with error."""
+
+        mocker_register_uri(mocker, self.client.host, "/richiesta/info", "error.json")
+        with self.assertRaises(FattureInCloudExcpetion):
+            self.client.info()
+
+    @patch("requests.post", return_value=MockedErrorResponse())
+    def test_post_error_status_code(self, m):
+        """Test requester post method with error status code."""
+
+        with self.assertRaises(FattureInCloudExcpetion):
+            self.client.info()

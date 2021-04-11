@@ -3,8 +3,7 @@ import requests
 
 from .exceptions import FattureInCloudExcpetion
 from .models.anagrafica import Clienti, Fornitori
-from .models.documenti import (DDT, NDC, Fatture, Ordini, Preventivi, Proforma,
-                               Ricevute)
+from .models.documenti import DDT, NDC, Fatture, Ordini, Preventivi, Proforma, Ricevute
 from .models.prodotti import Prodotti
 
 

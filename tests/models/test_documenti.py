@@ -1,11 +1,19 @@
+from unittest import TestCase
+
 from requests_mock import Mocker
 
+from fattureincloud.client import FattureInCloudAPI
 from tests.mocking import mocker_register_uri
-from tests.test_client import TestClient
 
 
-class TestDocumenti(TestClient):
+class TestDocumenti(TestCase):
     """Define simple test case for base client request."""
+
+    maxDiff = None
+
+    def setUp(self):
+        """Set client with key and uid."""
+        self.client = FattureInCloudAPI(api_uid="123456", api_key="qwerty")
 
     @Mocker()
     def test_documenti_lista(self, mocker):
@@ -115,3 +123,27 @@ class TestDocumenti(TestClient):
             obj = getattr(self.client, t)
             info = obj.infomail(_id=1, token="1234567890abcdefghijklmnopqrstuv")
             self.assertDictEqual(info, EXPECTED)
+
+    def test_nuovo(self):
+        """Test nuovo method."""
+
+        with self.assertRaises(NotImplementedError):
+            self.client.fatture.nuovo()
+
+    def test_modifica(self):
+        """Test modifica method."""
+
+        with self.assertRaises(NotImplementedError):
+            self.client.fatture.modifica()
+
+    def test_elimina(self):
+        """Test elimina method."""
+
+        with self.assertRaises(NotImplementedError):
+            self.client.fatture.elimina()
+
+    def test_inviamail(self):
+        """Test inviamail method."""
+
+        with self.assertRaises(NotImplementedError):
+            self.client.fatture.inviamail()

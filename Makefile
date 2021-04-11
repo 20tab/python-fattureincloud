@@ -4,6 +4,12 @@ check:
 	flake8
 	mypy .
 
+coverage:
+	coverage run setup.py test
+	coverage combine
+	coverage html
+	coverage report
+
 dev:
 	python3 -m pip install -q -U pip~=21.0.0 pip-tools~=6.0.0
 	pip-sync requirements.txt
