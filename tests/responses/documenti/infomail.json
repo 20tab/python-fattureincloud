@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "mail_destinatario": "mario.rossi@example.it",
+    "mail_mittente": [
+        {
+            "id": "0",
+            "default": "true",
+            "mail": "mio.indirizzo.invio@example.it"
+        }
+    ],
+    "mail_cc": "mio.indirizzo@example.it",
+    "oggetto_default": "Nostra fattura nr. 1",
+    "messaggio_default": "Gentile Mario Rossi, ecco la nostra fattura.",
+    "esiste_documento": true,
+    "esiste_ddt": true,
+    "esiste_fa": true,
+    "esiste_allegato": true
+}

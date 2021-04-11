@@ -2,20 +2,25 @@
 from fattureincloud.models.base import Resource
 
 
-class Soggetto(Resource):
+class Prodotti(Resource):
     """Soggetto class."""
 
-    def lista(self, _id="", filtro="", nome="", cf="", piva="", pagina=1):
+    def lista(
+        self, _id="", filtro="", nome="", cod="", desc="", categoria="", pagina=1
+    ):
         """Return list of elements filtered by given parameters if set."""
         payload = {
             "id": _id,
             "filtro": filtro,
             "nome": nome,
-            "cf": cf,
-            "piva": piva,
+            "cod": cod,
+            "desc": desc,
+            "categoria": categoria,
             "pagina": pagina,
         }
-        return self.requester.post(f"{self.path}lista", payload)
+        return self.requester.post(f"{self.path}lista", payload).get(
+            "lista_prodotti", []
+        )
 
     def nuovo(self, **kwargs):
         """Create new soggetto."""
@@ -32,19 +37,3 @@ class Soggetto(Resource):
     def elimina(self, **kwargs):
         """Delete soggetto."""
         raise NotImplementedError
-
-
-class Clienti(Soggetto):
-    """Clienti class."""
-
-    def lista(self, **kwargs):
-        """Return list of Clienti filtered by given parameters if set."""
-        return super().lista(**kwargs).get("lista_clienti", [])
-
-
-class Fornitori(Soggetto):
-    """Fornitori class."""
-
-    def lista(self, **kwargs):
-        """Return list of Fornitori filtered by given parameters if set."""
-        return super().lista(**kwargs).get("lista_fornitori", [])

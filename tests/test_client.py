@@ -33,17 +33,3 @@ class TestClient(TestCase):
         }
         res = self.client.info()
         self.assertEqual(res, EXPECTED)
-
-    @Mocker()
-    def test_clienti(self, mocker):
-        """Test clienti."""
-        mocker_register_uri(mocker, self.client.host, "/clienti/lista", "clienti.json")
-        self.assertEqual(len(self.client.clienti.lista()), 4)
-
-    @Mocker()
-    def test_fornitori(self, mocker):
-        """Test fornitori."""
-        mocker_register_uri(
-            mocker, self.client.host, "/fornitori/lista", "fornitori.json"
-        )
-        self.assertEqual(len(self.client.fornitori.lista(nome="cane")), 2)

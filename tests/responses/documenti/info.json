@@ -1,0 +1,21 @@
+{
+    "info": {
+      "ddt_numero_successivo": 1,
+      "numerazioni": {
+        "": 105
+      },
+      "default_id_template": "2821",
+      "default_ddt_id_template": "3053",
+      "default_ftacc_id_template": "3054",
+      "default_cod_iva": 0,
+      "default_note": "",
+      "default_cassa_previdenziale": 0,
+      "default_rivalsa_previdenziale": 0,
+      "default_altra_ritenuta": 0,
+      "default_ritenuta_acconto": 0,
+      "default_imponibile_ritenuta": 100,
+      "default_prezzi_ivati": false,
+      "default_id_metodo_pagamento": 1269724
+    },
+    "success": true
+  }

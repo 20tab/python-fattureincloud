@@ -3,6 +3,9 @@ import requests
 
 from .exceptions import FattureInCloudExcpetion
 from .models.anagrafica import Clienti, Fornitori
+from .models.documenti import (DDT, NDC, Fatture, Ordini, Preventivi, Proforma,
+                               Ricevute)
+from .models.prodotti import Prodotti
 
 
 class FattureInCloudAPI:
@@ -20,8 +23,21 @@ class FattureInCloudAPI:
         self.host = "https://api.fattureincloud.it/v1"
         self.request_maker = RequestMaker(api_uid, api_key, self.host)
 
+        #  Anagrafica
         self.clienti = Clienti(self.request_maker)
         self.fornitori = Fornitori(self.request_maker)
+
+        # Prodotti
+        self.prodotti = Prodotti(self.request_maker)
+
+        # Documenti
+        self.fatture = Fatture(self.request_maker)
+        self.proforma = Proforma(self.request_maker)
+        self.ordini = Ordini(self.request_maker)
+        self.preventivi = Preventivi(self.request_maker)
+        self.ndc = NDC(self.request_maker)
+        self.ricevute = Ricevute(self.request_maker)
+        self.ddt = DDT(self.request_maker)
 
     def info(self):
         """Return info."""
