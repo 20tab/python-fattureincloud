@@ -25,12 +25,3 @@ jobs:
     - name: Test with coverage
       run: |
         make coverage
-    - name: Code Coverage Report
-      # You may pin to the exact commit or the version.
-      # uses: romeovs/lcov-reporter-action@90fd2b751de87c16edf5ae1d5878b73755c497b0
-      uses: romeovs/lcov-reporter-action@v0.2.11
-      with:
-        # Github token
-        github-token: 
-        # The location of the lcov.info file
-        lcov-file: # optional
