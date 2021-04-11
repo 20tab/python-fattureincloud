@@ -1,7 +1,7 @@
 # python-fattureincloud
 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 [![Python package](https://github.com/20tab/python-fattureincloud/actions/workflows/python-package.yml/badge.svg)](https://github.com/20tab/python-fattureincloud/actions/workflows/python-package.yml)
 
 > A python wrapper for the [FattureInCloud REST API](https://api.fattureincloud.it/v1/documentation/dist/).
