@@ -39,6 +39,7 @@ class Clienti(Soggetto):
 
     list_key = "lista_clienti"
 
+
 class Fornitori(Soggetto):
     """Fornitori class."""
 
