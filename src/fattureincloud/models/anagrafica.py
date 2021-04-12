@@ -15,7 +15,7 @@ class Soggetto(Resource):
             "piva": piva,
             "pagina": pagina,
         }
-        return self.requester.post(f"{self.path}lista", payload)
+        return super().lista(**payload)
 
     def nuovo(self, **kwargs):
         """Create new soggetto."""
@@ -37,14 +37,9 @@ class Soggetto(Resource):
 class Clienti(Soggetto):
     """Clienti class."""
 
-    def lista(self, **kwargs):
-        """Return list of Clienti filtered by given parameters if set."""
-        return super().lista(**kwargs).get("lista_clienti", [])
-
+    list_key = "lista_clienti"
 
 class Fornitori(Soggetto):
     """Fornitori class."""
 
-    def lista(self, **kwargs):
-        """Return list of Fornitori filtered by given parameters if set."""
-        return super().lista(**kwargs).get("lista_fornitori", [])
+    list_key = "lista_fornitori"

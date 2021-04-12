@@ -7,6 +7,8 @@ from fattureincloud.models.base import Resource
 class Acquisti(Resource):
     """Acquisti class."""
 
+    list_key = "lista_documenti"
+
     def lista(
         self,
         anno="",
@@ -31,9 +33,7 @@ class Acquisti(Resource):
             "saldato": saldato,
             "mostra_link_allegato": mostra_link_allegato,
         }
-        return self.requester.post(f"{self.path}lista", payload).get(
-            "lista_documenti", []
-        )
+        return super().lista(**payload)
 
     def dettagli(self, _id=""):
         """Return acquisti's details."""

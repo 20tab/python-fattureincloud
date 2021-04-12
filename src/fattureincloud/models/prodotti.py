@@ -5,6 +5,8 @@ from fattureincloud.models.base import Resource
 class Prodotti(Resource):
     """Soggetto class."""
 
+    list_key = "lista_prodotti"
+
     def lista(
         self, _id="", filtro="", nome="", cod="", desc="", categoria="", pagina=1
     ):
@@ -18,9 +20,7 @@ class Prodotti(Resource):
             "categoria": categoria,
             "pagina": pagina,
         }
-        return self.requester.post(f"{self.path}lista", payload).get(
-            "lista_prodotti", []
-        )
+        return super().lista(**payload)
 
     def nuovo(self, **kwargs):
         """Create new soggetto."""

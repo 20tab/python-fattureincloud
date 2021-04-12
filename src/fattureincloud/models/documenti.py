@@ -7,6 +7,8 @@ from fattureincloud.models.base import Resource
 class Documenti(Resource):
     """Documenti class."""
 
+    list_key = "lista_documenti"
+
     def lista(
         self,
         anno_competenza=None,
@@ -31,9 +33,7 @@ class Documenti(Resource):
             "oggetto": oggetto,
             "pagina": pagina,
         }
-        return self.requester.post(f"{self.path}lista", payload).get(
-            "lista_documenti", []
-        )
+        return super().lista(**payload)
 
     def dettagli(self, _id="", token=""):
         """Return document's details."""

@@ -7,6 +7,8 @@ from fattureincloud.models.base import Resource
 class Mail(Resource):
     """Mail class."""
 
+    list_key = "lista_mail"
+
     def lista(
         self,
         filtro="",
@@ -29,4 +31,4 @@ class Mail(Resource):
             or date(year=date.today().year, month=12, day=31).strftime("%d/%m/%Y"),
             "pagina": pagina,
         }
-        return self.requester.post(f"{self.path}lista", payload).get("lista_mail", [])
+        return super().lista(**payload)

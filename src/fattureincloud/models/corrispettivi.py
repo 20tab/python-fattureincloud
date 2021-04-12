@@ -7,6 +7,8 @@ from fattureincloud.models.base import Resource
 class Corrispettivi(Resource):
     """Corrispettivi class."""
 
+    list_key = "lista_corrispettivi"
+
     def lista(self, anno="", tipo="", data_inizio="", data_fine="", _id=""):
         """Return list of elements filtered by given parameters if set."""
         payload = {
@@ -18,9 +20,7 @@ class Corrispettivi(Resource):
             or date(year=date.today().year, month=12, day=31).strftime("%d/%m/%Y"),
             "id": _id,
         }
-        return self.requester.post(f"{self.path}lista", payload).get(
-            "lista_corrispettivi", []
-        )
+        return super().lista(**payload)
 
     def nuovo(self, **kwargs):
         """Create new corrispettivi."""
