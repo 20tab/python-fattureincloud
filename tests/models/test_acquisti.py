@@ -38,6 +38,12 @@ class TestAcquisti(TestCase):
         with self.assertRaises(NotImplementedError):
             self.client.acquisti.nuovo()
 
+    def test_importa(self):
+        """Test importa method."""
+
+        with self.assertRaises(NotImplementedError):
+            self.client.acquisti.importa()
+
     def test_modifica(self):
         """Test modifica method."""
 

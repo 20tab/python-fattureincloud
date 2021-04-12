@@ -1,0 +1,43 @@
+{
+    "success": true,
+    "lista_prodotti": [
+      {
+        "id": "0",
+        "cod": "",
+        "nome": "Prodotto esempio",
+        "desc": "",
+        "prezzo_ivato": false,
+        "prezzo_netto": "0.00",
+        "prezzo_lordo": "0.00",
+        "costo": "0.00",
+        "valore_iva": 22,
+        "desc_iva": "",
+        "um": "",
+        "categoria": "",
+        "note": "",
+        "magazzino": false,
+        "giacenza_iniziale": "0",
+        "giacenza": "0"
+      },
+      {
+        "id": "1",
+        "cod": "",
+        "nome": "Prodotto esempio 1",
+        "desc": "",
+        "prezzo_ivato": false,
+        "prezzo_netto": "0.00",
+        "prezzo_lordo": "0.00",
+        "costo": "0.00",
+        "valore_iva": 22,
+        "desc_iva": "",
+        "um": "",
+        "categoria": "",
+        "note": "",
+        "magazzino": false,
+        "giacenza_iniziale": "0",
+        "giacenza": "0"
+      }
+    ],
+    "pagina_corrente": 1,
+    "numero_pagine": 2
+  }
