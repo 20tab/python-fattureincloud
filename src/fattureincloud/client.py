@@ -58,6 +58,10 @@ class FattureInCloudAPI:
         """Return info."""
         return self.request_maker.post("/richiesta/info")
 
+    def account(self):
+        """Return account info."""
+        return self.request_maker.post("/info/account")
+
 
 class RequestMaker:
     """

@@ -37,6 +37,15 @@ class TestClient(TestCase):
         self.assertEqual(res, EXPECTED)
 
     @Mocker()
+    def test_account_info(self, mocker):
+        """Test account info method."""
+
+        mocker_register_uri(mocker, self.client.host, "/info/account", "account.json")
+        res = self.client.account()
+        self.assertTrue(res.get("success"))
+        self.assertEqual(res.get("nome"), "Mario Rossi S.r.l.")
+
+    @Mocker()
     def test_post_error(self, mocker):
         """Test requester post method with error."""
 

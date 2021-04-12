@@ -1,0 +1,59 @@
+{
+    "success": true,
+    "nome": "Mario Rossi S.r.l.",
+    "durata_licenza": 365,
+    "tipo_licenza": "standard",
+    "lista_valute": [
+      {
+        "codice": "EUR",
+        "simbolo": "€",
+        "cambio": "1.00000"
+      }
+    ],
+    "lista_iva": [
+      {
+        "cod_iva": "0",
+        "valore_iva": "22",
+        "descrizione_iva": ""
+      }
+    ],
+    "lista_paesi": [
+      "Italia"
+    ],
+    "lista_template": [
+      {
+        "id": "11",
+        "nome_template": "New Standard S1"
+      }
+    ],
+    "lista_template_ddt": {
+      "id": "11",
+      "nome_template": "New Standard S1"
+    },
+    "lista_template_ddt_ftacc": {
+      "id": "11",
+      "nome_template": "New Standard S1"
+    },
+    "lista_conti": [
+      {
+        "id": "11",
+        "nome_conto": "Mio Conto Bancario"
+      }
+    ],
+    "lista_metodi_pagamento": [
+      {
+        "id": "11",
+        "nome_metodo": "New Standard S1",
+        "campo1": "IBAN",
+        "desc1": "IT02L1234512345123456789012",
+        "campo2": "Intestatario",
+        "desc2": "Mario Rossi",
+        "campo3": "",
+        "desc3": "",
+        "campo4": "",
+        "desc4": "",
+        "campo5": "",
+        "desc5": ""
+      }
+    ]
+  }
