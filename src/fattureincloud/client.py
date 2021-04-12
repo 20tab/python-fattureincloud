@@ -3,7 +3,11 @@ import requests
 
 from .exceptions import FattureInCloudExcpetion
 from .models.anagrafica import Clienti, Fornitori
+from .models.acquisti import Acquisti
+from .models.corrispettivi import Corrispettivi
 from .models.documenti import DDT, NDC, Fatture, Ordini, Preventivi, Proforma, Ricevute
+from .models.magazzino import ArriviMerce
+from .models.mail import Mail
 from .models.prodotti import Prodotti
 
 
@@ -37,6 +41,18 @@ class FattureInCloudAPI:
         self.ndc = NDC(self.request_maker)
         self.ricevute = Ricevute(self.request_maker)
         self.ddt = DDT(self.request_maker)
+
+        # Acquisti
+        self.acquisti = Acquisti(self.request_maker)
+
+        # Corrispettivi
+        self.corrispettivi = Corrispettivi(self.request_maker)
+
+        # Magazzino
+        self.arrivimerce = ArriviMerce(self.request_maker)
+
+        # Mail
+        self.mail = Mail(self.request_maker)
 
     def info(self):
         """Return info."""
