@@ -1,14 +1,13 @@
 """Anagrafica app."""
 from datetime import date
+
 from fattureincloud.models.base import Resource
 
 
 class Corrispettivi(Resource):
     """Corrispettivi class."""
 
-    def lista(
-        self, anno="", tipo="", data_inizio="", data_fine="", _id=""
-    ):
+    def lista(self, anno="", tipo="", data_inizio="", data_fine="", _id=""):
         """Return list of elements filtered by given parameters if set."""
         payload = {
             "anno": anno or date.today().year,
@@ -17,7 +16,7 @@ class Corrispettivi(Resource):
             or date(year=date.today().year, month=1, day=1).strftime("%d/%m/%Y"),
             "data_fine": data_fine
             or date(year=date.today().year, month=12, day=31).strftime("%d/%m/%Y"),
-            "id": _id
+            "id": _id,
         }
         return self.requester.post(f"{self.path}lista", payload).get(
             "lista_corrispettivi", []

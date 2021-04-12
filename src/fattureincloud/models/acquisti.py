@@ -1,5 +1,6 @@
 """Anagrafica app."""
 from datetime import date
+
 from fattureincloud.models.base import Resource
 
 
@@ -7,7 +8,15 @@ class Acquisti(Resource):
     """Acquisti class."""
 
     def lista(
-        self, anno="", tipo="", data_inizio="", data_fine="", fornitore="", id_fornitore="", saldato="", mostra_link_allegato=""
+        self,
+        anno="",
+        tipo="",
+        data_inizio="",
+        data_fine="",
+        fornitore="",
+        id_fornitore="",
+        saldato="",
+        mostra_link_allegato="",
     ):
         """Return list of elements filtered by given parameters if set."""
         payload = {
@@ -20,7 +29,7 @@ class Acquisti(Resource):
             "fornitore": fornitore,
             "id_fornitore": id_fornitore,
             "saldato": saldato,
-            "mostra_link_allegato": mostra_link_allegato
+            "mostra_link_allegato": mostra_link_allegato,
         }
         return self.requester.post(f"{self.path}lista", payload).get(
             "lista_documenti", []

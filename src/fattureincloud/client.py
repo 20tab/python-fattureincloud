@@ -2,8 +2,8 @@
 import requests
 
 from .exceptions import FattureInCloudExcpetion
-from .models.anagrafica import Clienti, Fornitori
 from .models.acquisti import Acquisti
+from .models.anagrafica import Clienti, Fornitori
 from .models.corrispettivi import Corrispettivi
 from .models.documenti import DDT, NDC, Fatture, Ordini, Preventivi, Proforma, Ricevute
 from .models.magazzino import ArriviMerce

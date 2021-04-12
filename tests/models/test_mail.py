@@ -18,8 +18,5 @@ class TestMail(TestCase):
     @Mocker()
     def test_mail(self, mocker):
         """Test mail."""
-        mocker_register_uri(
-            mocker, self.client.host, "/mail/lista", "mail/mail.json"
-        )
+        mocker_register_uri(mocker, self.client.host, "/mail/lista", "mail/mail.json")
         self.assertEqual(len(self.client.mail.lista()), 1)
-

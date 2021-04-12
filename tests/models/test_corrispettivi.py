@@ -19,7 +19,10 @@ class TestCorrispettivi(TestCase):
     def test_corrispettivi(self, mocker):
         """Test corrispettivi."""
         mocker_register_uri(
-            mocker, self.client.host, "/corrispettivi/lista", "corrispettivi/corrispettivi.json"
+            mocker,
+            self.client.host,
+            "/corrispettivi/lista",
+            "corrispettivi/corrispettivi.json",
         )
         self.assertEqual(len(self.client.corrispettivi.lista()), 1)
 
