@@ -15,7 +15,7 @@ class Resource:
     def lista(self, **kwargs):
         """Return list of elements filtered by given parameters if set."""
         res = self.requester.post(f"{self.path}lista", kwargs)
-        if self.list_key != "":
+        if self.list_key == "":
             return res
         result_list = res.get(self.list_key, [])
         current_page = res.get("pagina_corrente", 1)
