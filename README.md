@@ -3,6 +3,7 @@
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 [![Python package](https://github.com/20tab/python-fattureincloud/actions/workflows/python-package.yml/badge.svg)](https://github.com/20tab/python-fattureincloud/actions/workflows/python-package.yml)
+[![codecov](https://codecov.io/gh/20tab/python-fattureincloud/branch/main/graph/badge.svg?token=A229TF8PLG)](https://codecov.io/gh/20tab/python-fattureincloud)
 
 > A python wrapper for the [FattureInCloud REST API](https://api.fattureincloud.it/v1/documentation/dist/).
 
@@ -74,4 +75,40 @@ invoice_infomail = client.fatture.infomail(
     _id="invoice_id", 
     token="invoice_token"
 )
+```
+
+### ⚫ Acquisti
+
+```python
+# Get all purchases 
+acquisti = client.acquisti.lista()
+
+acquisti_details = client.acquisti.dettagli(
+    _id="acquisti_id"
+)
+```
+
+### ⚫ Corrispettivi
+
+```python
+# Get all payments 
+corrispettivi = client.corrispettivi.lista()
+```
+
+### ⚫ Magazzino
+
+```python
+# Get all merchandise 
+arrivimerce = client.arrivimerce.lista()
+
+arrivimerce_details = client.arrivimerce.dettagli(
+    _id="arrivimerce_id"
+)
+```
+
+### ⚫ Mail
+
+```python
+# Get all mails 
+mail = client.mail.lista()
 ```
