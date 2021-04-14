@@ -28,4 +28,4 @@ pip:
 	pip-compile -q -U -o requirements.txt requirements.in
 
 test:
-	PYTHONPATH=src/ python -m pytest --cache-clear --cov=fattureincloud
+	PYTHONPATH=src/ python -m pytest --cache-clear --cov=fattureincloud --cov-report=xml
