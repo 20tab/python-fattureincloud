@@ -25,12 +25,3 @@ jobs:
     - name: Test with coverage
       run: |
         PYTHONPATH=src/ python -m pytest --cache-clear --cov=fattureincloud --cov-report=xml
-    - name: coverage.py badge
-      # You may pin to the exact commit or the version.
-      # uses: tj-actions/coverage-badge-py@545ccccfd2b4b9944fb6383183dd7d45f96c72f3
-      uses: tj-actions/coverage-badge-py@v1.4
-      with:
-        # Output path to write the badge.
-        output: # default is coverage.svg
-        # Overwrite existing.
-        overwrite: # default is true
