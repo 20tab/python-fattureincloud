@@ -1,0 +1,25 @@
+{
+    "success": true,
+    "lista_corrispettivi": [
+      {
+        "id": "0",
+        "tipo": "ricevute",
+        "data": "11/04/2021",
+        "protocollo": "1A",
+        "desc": "Descrizione prova",
+        "importo_netto": 0,
+        "importo_lordo": 0,
+        "centro_ricavo": "",
+        "metodo": "Banca XYZ",
+        "importi_ivati": false,
+        "lista_righe": [
+          {
+            "importo": 0,
+            "valore_iva": 0,
+            "desc_iva": "",
+            "categoria": ""
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,23 @@
+{
+    "success": true,
+    "lista_mail": [
+      {
+        "id": "0",
+        "stato_invio": "inviato",
+        "data": "11/04/2021 15:52:47",
+        "mail_mittente": "info@mariorossi.it",
+        "mittente": "Mario Rossi",
+        "mail_destinatario": "info@giovanniverdi.it",
+        "destinatario": "Giovanni Verdi",
+        "oggetto": "Nostra fattura n. 123",
+        "messaggio": "Ecco la fattura n. 123 del valore di 12.34 EUR",
+        "mail_copia": "",
+        "tipo": "Fatture",
+        "stato_lettura": "mail_letta",
+        "data_lettura": "11/04/2021 15:52:47",
+        "allegati": ""
+      }
+    ],
+    "pagina_corrente": 1,
+    "numero_pagine": 1
+  }

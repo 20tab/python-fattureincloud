@@ -1,0 +1,22 @@
+[tool.black]
+target-version = ["py38"]
+
+[tool.coverage.run]
+branch = true
+concurrency = ["multiprocessing"]
+data_file = ".coverages/.coverage"
+disable_warnings = ["no-data-collected"]
+omit = [
+    "*/tests/*",
+]
+source = ["."]
+
+[tool.isort]
+atomic = true
+profile = "black"
+combine_as_imports = true
+default_section = "THIRDPARTY"
+known_first_party = [
+    "fattureincloud",
+]
+

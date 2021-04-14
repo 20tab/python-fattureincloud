@@ -1,0 +1,46 @@
+{
+    "lista_documenti": [
+        {
+            "id": "1",
+            "token": "1234567890abcdefghijklmnopqrstuv",
+            "tipo": "ricevute",
+            "id_cliente": "0",
+            "nome": "Mario Rossi",
+            "numero": "1a",
+            "data": "",
+            "importo_netto": 0,
+            "importo_totale": 0,
+            "valuta": "EUR",
+            "valuta_cambio": 1,
+            "prossima_scadenza": "00/00/0000",
+            "ddt": false,
+            "ftacc": false,
+            "oggetto_fattura": "",
+            "oggetto_interno": "",
+            "link_doc": ""
+        }, {
+            "id": "2",
+            "token": "1234567890abcdefghijklmnopqrstu3",
+            "tipo": "ricevute",
+            "id_cliente": "0",
+            "nome": "Mario Rossi",
+            "numero": "1a",
+            "data": "",
+            "importo_netto": 0,
+            "importo_totale": 0,
+            "valuta": "EUR",
+            "valuta_cambio": 1,
+            "prossima_scadenza": "00/00/0000",
+            "ddt": false,
+            "ftacc": false,
+            "oggetto_fattura": "",
+            "oggetto_interno": "",
+            "link_doc": ""
+        }
+    ],
+    "pagina_corrente": 1,
+    "numero_pagine": 1,
+    "numero_risultati": 2,
+    "risultati_per_pagina": 250,
+    "success": true
+}

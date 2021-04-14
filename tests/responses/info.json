@@ -1,0 +1,7 @@
+{
+    "messaggio": "I parametri 'api_key' e 'api_uid' sono corretti.",
+    "limite_breve": "Rimangono 29 richieste per i prossimi 60 secondi",
+    "limite_medio": "Rimangono 499 richieste per i prossimi 3600 secondi",
+    "limite_lungo": "Rimangono 36929 richieste per i prossimi 1142233 secondi",
+    "success": true
+}

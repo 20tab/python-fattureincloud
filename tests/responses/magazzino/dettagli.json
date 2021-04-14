@@ -1,0 +1,33 @@
+{
+    "success": true,
+    "dettagli_documento": {
+      "id": "13",
+      "id_fornitore": "0",
+      "nome": "Mario Rossi",
+      "data": "11/04/2021",
+      "descrizione": "Licenza software ABC",
+      "categoria": "",
+      "importo_netto": 0,
+      "importo_iva": 0,
+      "importo_totale": 0,
+      "valuta": "EUR",
+      "valuta_cambio": 1,
+      "link_allegato": null,
+      "numero_ddt": "",
+      "lista_articoli": [
+        {
+          "id": "0",
+          "codice": "",
+          "nome": "Articolo 1",
+          "um": "",
+          "quantita": 1,
+          "prezzo_netto": 0,
+          "valore_iva": 0,
+          "desc_iva": "",
+          "categoria": "",
+          "ordine": 0,
+          "magazzino": true
+        }
+      ]
+    }
+  }

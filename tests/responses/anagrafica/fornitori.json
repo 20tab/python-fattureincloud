@@ -1,0 +1,42 @@
+{
+    "lista_fornitori": [
+        {
+            "id": "1",
+            "nome": "ACCADEMIA SRL",
+            "referente": "",
+            "indirizzo": "",
+            "indirizzo_via": "",
+            "indirizzo_cap": "",
+            "indirizzo_citta": "",
+            "indirizzo_provincia": "",
+            "indirizzo_extra": "",
+            "paese": "Italia",
+            "mail": "amministrazione@accademia.it",
+            "tel": "",
+            "fax": "",
+            "piva": "12345678905",
+            "cf": "12345678905",
+            "extra": ""
+        }, {
+            "id": "2",
+            "nome": "Amazon srl ",
+            "referente": "",
+            "indirizzo": "",
+            "indirizzo_via": "",
+            "indirizzo_cap": "",
+            "indirizzo_citta": "",
+            "indirizzo_provincia": "",
+            "indirizzo_extra": "",
+            "paese": "Italia",
+            "mail": "",
+            "tel": "",
+            "fax": "",
+            "piva": "",
+            "cf": "",
+            "extra": ""
+        }
+    ],
+    "pagina_corrente": 1,
+    "numero_pagine": 1,
+    "success": true
+}
