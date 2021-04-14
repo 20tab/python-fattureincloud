@@ -27,3 +27,5 @@ jobs:
         PYTHONPATH=src/ python -m pytest --cache-clear --cov=fattureincloud > pytest-coverage.txt
     - name: Comment coverage
       uses: coroo/pytest-coverage-commentator@v1.0.2
+      with:
+        pytest-coverage: pytest-coverage.txt
