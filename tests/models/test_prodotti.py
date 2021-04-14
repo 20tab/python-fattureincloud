@@ -27,7 +27,10 @@ class TestProdotti(TestCase):
     def test_prodotti_2_pages(self, mocker):
         """Test prodotti with 2 pages."""
         mocker_register_uri(
-            mocker, self.client.host, "/prodotti/lista", "prodotti/prodotti_2_pages.json"
+            mocker,
+            self.client.host,
+            "/prodotti/lista",
+            "prodotti/prodotti_2_pages.json",
         )
         self.assertEqual(len(self.client.prodotti.lista()), 4)
 
